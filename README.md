@@ -21,6 +21,9 @@
 
 To ensure a fair and comprehensive comparison of different Large Language Models (LLMs), we follow a standardized testing process:
 
+### Large Language Models Used
+
+In this project, we are focusing on two of OpenAI's Large Language Models: GPT-3 and GPT-4. Below is a brief overview of each:
 ### GPT-3
 - **Description:** GPT-3 is a well-established model known for its wide-ranging language processing capabilities. It is suitable for various applications including text generation, translation, and more.
 - **API Integration:** Accessible via OpenAI's API, providing a user-friendly platform for integration.
@@ -75,9 +78,5 @@ To assess the performance of each LLM, we establish standardized evaluation crit
 - **Regular Reporting:** Findings are reported regularly, including both qualitative and quantitative analyses.
 
 This structured approach to testing and evaluation ensures an objective and detailed comparison of the LLMs, providing valuable insights into their suitability for various applications.
-
-### Large Language Models Used
-
-In this project, we are focusing on two of OpenAI's Large Language Models: GPT-3 and GPT-4. Below is a brief overview of each:
 
 
