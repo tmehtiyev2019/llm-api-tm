@@ -10,13 +10,11 @@
 - To investigate the impact of various prompt structures on the performance of LLMs in this specific application.
 
 ## Approach
-- **LLM Selection and Integration:** Identify and select a range of LLMs for experimentation, including OpenAI's models.
-- **Function Calling Schema Development:** Define function calling schemas that the LLMs can use to structure their responses, mimicking the process of API calls.
-- **Comparative Analysis Methodology:** Outline the methodology for a comparative analysis of the selected LLMs.
-- **Testing and Evaluation Framework:** Develop a framework for standardized testing and evaluation of LLMs.
-- **Prompt Structure Experiments:** Design experiments to test the effectiveness of different prompt structures across various LLMs.
-## Standardizing Testing and Evaluation Criteria
-
+- **LLM Selection and Integration:** To identify and select a range of LLMs for experimentation, including OpenAI's models.
+- **Function Calling Schema Development:** To fefine function calling schemas that the LLMs can use to structure their responses, mimicking the process of API calls.
+- **Comparative Analysis Methodology:** To outline the methodology for a comparative analysis of the selected LLMs.
+- **Testing and Evaluation Framework:** To develop a framework for standardized testing and evaluation of LLMs.
+- **Prompt Structure Experiments:** To design experiments to test the effectiveness of different prompt structures across various LLMs.
 
 ### Large Language Models Used
 
@@ -32,6 +30,8 @@ In this project, we are focusing on two of OpenAI's Large Language Models: GPT-3
 - **Notable Capabilities:** Improved accuracy, context comprehension, and detailed response generation compared to its predecessor.
 
 Both models will be evaluated for their effectiveness in interpreting free-form text and generating structured API calls.
+  
+## Standardizing Testing and Evaluation Criteria
 
 ### Testing Standardization
 
