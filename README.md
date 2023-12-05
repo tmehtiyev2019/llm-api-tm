@@ -70,12 +70,9 @@ To assess the performance of each LLM, we establish standardized evaluation crit
 #### Benchmarking
 - **Performance Benchmarks:** We establish benchmarks for each metric to classify LLM performance.
 
-#### Feedback Loop
-- **Continuous Improvement:** The test cases and evaluation criteria are regularly updated based on new insights and advancements.
-
 ### Documentation and Reporting
 
-- **Transparent Documentation:** The methodologies for testing and evaluation are thoroughly documented for clarity and reproducibility.
+- **Documentation:** The methodologies for testing and evaluation are thoroughly documented for clarity and reproducibility.
 - **Regular Reporting:** Findings are reported regularly, including both qualitative and quantitative analyses.
 
 This structured approach to testing and evaluation ensures an objective and detailed comparison of the LLMs, providing valuable insights into their suitability for various applications.
