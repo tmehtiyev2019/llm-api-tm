@@ -17,9 +17,6 @@
 - **Prompt Structure Experiments:** Design experiments to test the effectiveness of different prompt structures across various LLMs.
 ## Standardizing Testing and Evaluation Criteria
 
-### Testing Standardization
-
-To ensure a fair and comprehensive comparison of different Large Language Models (LLMs), we follow a standardized testing process:
 
 ### Large Language Models Used
 
@@ -35,6 +32,10 @@ In this project, we are focusing on two of OpenAI's Large Language Models: GPT-3
 - **Notable Capabilities:** Improved accuracy, context comprehension, and detailed response generation compared to its predecessor.
 
 Both models will be evaluated for their effectiveness in interpreting free-form text and generating structured API calls.
+
+### Testing Standardization
+
+To ensure a structured and standardized comparison of different Large Language Models (LLMs), we follow a standardized testing process:
 
 #### Test Case Development
 - **Diverse Scenarios:** We design a set of standardized test cases that cover a wide range of input scenarios to comprehensively evaluate the LLMs' capabilities.
