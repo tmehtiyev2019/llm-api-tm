@@ -100,22 +100,59 @@ The schema is inspired by and adapted from a guided research project by ADA-GWU.
 
 ### Testing Standardization
 
-To ensure a structured and standardized comparison of different Large Language Models (LLMs), we follow a standardized testing process:
+#### Overview
 
-#### Test Case Development
-- **Diverse Scenarios:** We design a set of standardized test cases that cover a wide range of input scenarios to comprehensively evaluate the LLMs' capabilities.
-- **Consistency:** All test cases are crafted to ensure diversity in complexity, length.
+The testing involves generating structured API requests from unstructured user inputs using LangChain with three Large Language Models (LLMs) from OpenAI: GPT-3.5-Turbo, GPT-4, and GPT-4-Turbo. Additionally, for generating free-form text prompts, the "text-davinci-003" model is utilized.
 
-#### Testing Environment
-- **Uniform Environment:** Tests are conducted in a consistent environment — same hardware, software versions, and network conditions.
-- **Consistent LLM Utilization:** Each LLM is accessed and used in a similar manner to ensure uniformity in testing.
+#### Key Components
 
-#### Data Collection
-- **Structured Format:** Outputs from each LLM are collected and stored in a structured format for subsequent analysis.
+1. **User Input Processing Function (`process_user_input`):**
+   - Utilizes "text-davinci-003" model for generating free-form text prompts.
+   - Generates a response from the LLM using LangChain with the provided input.
 
-### Evaluation Criteria Standardization
+2. **Prompt Template:**
+   - Guides the LLMs to generate responses in a structured format.
 
-To assess the performance of each LLM, we use the following metrics:
+3. **JSON Schema:**
+   - Defines the structure for API request generation.
+
+4. **Structured Output Generation Function (`api_structure_output`):**
+   - Structures the LLM response based on the JSON schema.
+
+5. **Testing Loop:**
+   - Conducts 100 iterations to test output consistency and accuracy across different LLMs.
+
+## Testing Procedure
+
+1. **Input Generation:**
+   - Generate complex product descriptions as user inputs using "text-davinci-003".
+
+2. **LLM Response Generation:**
+   - Obtain responses from the LLM using the `process_user_input` function.
+
+3. **Structured API Request Generation:**
+   - Generate structured API requests using `api_structure_output` for each LLM model.
+
+4. **Data Collection:**
+   - Store LLM responses and structured API results in a DataFrame.
+
+7. **Result Analysis:**
+   - Evaluate the structured outputs' accuracy and consistency across models.
+
+## Evaluation Metrics
+
+- **Accuracy:** Alignment of structured outputs with the JSON schema.
+- **Consistency:** Uniformity of structured outputs in multiple iterations.
+- **Model Performance:** Comparative analysis of LLM models' accuracy and consistency.
+
+## Conclusion
+
+This testing process aims to evaluate the effectiveness of different LLMs in transforming unstructured user inputs into structured API content. The results will inform the selection of the most suitable LLM model for specific project use cases.
+
+---
+
+*Note: The incorporation of the "text-davinci-003" model for free-form text prompt generation is a crucial part of the process, ensuring diverse and complex inputs for testing.*
+
 
 #### Performance Metrics
 - **Accuracy:** The precision in translating natural language inputs to the correct API calls.
