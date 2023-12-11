@@ -182,13 +182,29 @@ Based on the weighted scores:
 
 The trend observed in the results aligns with expectations, considering the advancements in each subsequent LLM version.
 
-## Additional Resources
+## Code Execution and Dependencies
 
-For a detailed analysis, including scoring methodology, categorization, and examples from the observations, refer to the experiment data attached to this documentation.
+### Self-Contained Codebase
 
----
+The main code for generating structured API content via function calling in LLMs is designed to be self-contained. It includes all necessary dependencies, allowing you to execute the Jupyter notebook without additional setup for dependency management.
 
-*Note: This evaluation is crucial in guiding the selection of the most suitable LLM for specific use cases, ensuring the development of robust and reliable systems.*
+### Execution Process
+
+- To obtain results, simply run the notebook.
+- The code is structured to handle initialization, processing, and output generation within the execution flow.
+
+### Important Consideration
+
+- **Non-Deterministic Outputs:**
+  - It's crucial to be aware that input prompts do not generate identical outputs on every run. This non-deterministic nature means that subsequent executions may produce different results.
+  
+- **Testing Variability:**
+  - Due to the above characteristic, each test run is unique, and comparison across different runs should account for this variability.
+
+- **Reproducibility:**
+  - While the overall trends and model performance insights remain valid, the exact numbers and instances of inconsistencies may vary with each execution of the prompts.
+
+
 
 
 
