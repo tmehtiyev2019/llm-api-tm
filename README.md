@@ -137,35 +137,59 @@ The testing involves generating structured API requests from unstructured user i
 7. **Result Analysis:**
    - Evaluate the structured outputs' accuracy and consistency across models.
 
-## Evaluation Metrics
+## Evaluation Metrics and results
 
-- **Accuracy:** Alignment of structured outputs with the JSON schema.
-- **Consistency:** Uniformity of structured outputs in multiple iterations.
-- **Model Performance:** Comparative analysis of LLM models' accuracy and consistency.
+### Inconsistency Rate Evaluation in LLM Outputs
 
-## Conclusion
+#### Overview
 
-This testing process aims to evaluate the effectiveness of different LLMs in transforming unstructured user inputs into structured API content. The results will inform the selection of the most suitable LLM model for specific project use cases.
+During our testing process, we calculated the inconsistency rate between the outputs of the following LLMs: GPT-3.5-Turbo, GPT-4, and GPT-4-Turbo. Out of 100 observations, 43 cases showed different results among the mentioned LLMs, indicating inconsistencies.
+
+#### Methodology
+
+We analyzed all instances of inconsistency and categorized them into three distinct categories based on their nature and impact:
+
+##### Inconsistency Categories
+
+1. **Tricky Input Handling:**
+   - Description: Cases where the input was complex, and each LLM approached it differently.
+   - Category: 1
+
+2. **Significant Inconsistency:**
+   - Description: Major discrepancies in critical fields such as product name, quantity, or price.
+   - Category: 2
+
+3. **Slight Inconsistency:**
+   - Description: Minor variations in the output that do not significantly impact the overall use case.
+   - Category: 3
+
+#### Results
+
+After excluding categories 1 (tricky input) and 3 (slight inconsistency), we identified a 9% rate of significant inconsistencies across the three LLM versions.
+
+##### Scoring and Weight Allocation
+
+- We allocated weights to different versions based on the significance of mistakes in their output.
+- The scoring system was designed to reflect the severity and impact of the inconsistencies on the overall system reliability.
+
+## Conclusions
+
+Based on the weighted scores:
+
+- **GPT-4-Turbo:** Exhibited the lowest rate of significant errors.
+- **GPT-4:** Demonstrated a medium error rate.
+- **GPT-3.5-Turbo:** Showed a higher rate of significant errors.
+
+The trend observed in the results aligns with expectations, considering the advancements in each subsequent LLM version.
+
+## Additional Resources
+
+For a detailed analysis, including scoring methodology, categorization, and examples from the observations, refer to the experiment data attached to this documentation.
 
 ---
 
-*Note: The incorporation of the "text-davinci-003" model for free-form text prompt generation is a crucial part of the process, ensuring diverse and complex inputs for testing.*
+*Note: This evaluation is crucial in guiding the selection of the most suitable LLM for specific use cases, ensuring the development of robust and reliable systems.*
 
 
-#### Performance Metrics
-- **Accuracy:** The precision in translating natural language inputs to the correct API calls.
-- **Consistency:** The uniformity in performance across various input types.
-
-#### Evaluation Methods
-- **Manual Review:** Expert review is used where automated evaluation is not feasible.
-- **Statistical Analysis:** Statistical techniques are employed to analyze collected data.
-- **Error Analysis:** Types of errors made by each LLM are categorized and examined.
-
-### Documentation and Reporting
-
-- **Documentation:** The methodologies for testing and evaluation are thoroughly documented for clarity and reproducibility.
-- **Regular Reporting:** Findings are reported regularly, including both qualitative and quantitative analyses.
-
-This structured approach to testing and evaluation ensures an objective and detailed comparison of the LLMs, providing valuable insights into their suitability for various applications.
 
 
