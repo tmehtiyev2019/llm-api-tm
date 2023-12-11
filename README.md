@@ -7,29 +7,94 @@
 - To study the feasibility and effectiveness of using LLMs for interpreting freeform text and translating it into structured API calls.
 - To conduct a comparative analysis of multiple LLMs, assessing their performance in the context of API function calling.
 - To develop standardized testing and evaluation criteria for comparing different LLMs.
-- To investigate the impact of various prompt structures on the performance of LLMs in this specific application.
 
 ## Approach
-- **LLM Selection and Integration:** To identify and select a range of LLMs for experimentation, including OpenAI's models.
-- **Function Calling Schema Development:** To fefine function calling schemas that the LLMs can use to structure their responses, mimicking the process of API calls.
+- **LLM Selection:** To identify and select a range of LLMs for experimentation, including OpenAI's models.
+- **Function Calling Schema Development:** To define function calling schemas that the LLMs, we use to structure their responses, mimicking the process of API calls.
 - **Comparative Analysis Methodology:** To outline the methodology for a comparative analysis of the selected LLMs.
 - **Testing and Evaluation Framework:** To develop a framework for standardized testing and evaluation of LLMs.
-- **Prompt Structure Experiments:** To design experiments to test the effectiveness of different prompt structures across various LLMs.
 
-### Large Language Models Used
+### LLM Selection:
+In this project, we have expanded our focus to include three variations of OpenAI's Large Language Models: GPT-3.5-Turbo, GPT-4, and GPT-4-Turbo. Here's an updated overview:
 
-In this project, we are focusing on two of OpenAI's Large Language Models: GPT-3 and GPT-4. Below is a brief overview of each:
-### GPT-3
-- **Description:** GPT-3 is a well-established model known for its wide-ranging language processing capabilities. It is suitable for various applications including text generation, translation, and more.
-- **API Integration:** Accessible via OpenAI's API, providing a user-friendly platform for integration.
-- **Notable Capabilities:** Impressive linguistic abilities, suitable for a broad spectrum of text-based tasks.
+## GPT-3.5-Turbo (gpt-3.5-turbo-1106)
+- **Description:** An advanced version of GPT-3, designed for more efficient performance with faster response times.
+- **API Integration:** Accessible through the OpenAI API, optimized for quicker and more streamlined interactions.
+- **Notable Capabilities:** Enhanced speed and efficiency in processing requests, maintaining the robust language capabilities of GPT-3.
 
-### GPT-4
-- **Description:** The latest iteration in the GPT series, offering enhanced performance in understanding and generating text.
-- **API Integration:** Similar to GPT-3, GPT-4 is available through OpenAI's API, facilitating ease of use and integration.
-- **Notable Capabilities:** Improved accuracy, context comprehension, and detailed response generation compared to its predecessor.
+## GPT-4 (gpt-4)
+- **Description:** The latest and most sophisticated model in the GPT series, offering superior understanding and text generation abilities.
+- **API Integration:** Available via OpenAI's API, it continues the tradition of user-friendly integration with advanced features.
+- **Notable Capabilities:** Markedly improved accuracy, deeper context comprehension, and sophisticated response generation, surpassing previous models.
 
-Both models will be evaluated for their effectiveness in interpreting free-form text and generating structured API calls.
+## GPT-4-Turbo (gpt-4-1106-preview)
+- **Description:** A turbocharged variant of GPT-4, it combines the advanced capabilities of GPT-4 with the efficiency of turbo models.
+- **API Integration:** Integrates seamlessly with existing API setups, providing enhanced speed and performance.
+- **Notable Capabilities:** Combines the detailed understanding and output quality of GPT-4 with the rapid response times typical of turbo models.
+
+We will assess their effectiveness in interpreting free-form text and generating structured API calls.
+
+
+# Function Calling Schema Development
+
+In our project, we have developed a structured JSON schema to facilitate the generation of structured API requests. This schema is specifically designed for creating new products in a catalog system. Below is the detailed description of the schema and its components:
+
+## JSON Schema Overview
+
+- **Title:** APIRequest
+- **Description:** Schema for creating a new product in the catalog.
+- **Type:** object
+
+## Schema Properties
+
+- **method**
+  - **Type:** string
+  - **Description:** HTTP method for the API request. 
+  - **Allowed Values:** ["POST"]
+
+- **endpoint**
+  - **Type:** string
+  - **Description:** API endpoint for the request.
+  - **Constant Value:** "/products"
+
+- **description**
+  - **Type:** string
+  - **Description:** Descriptive text about the API request.
+
+- **requestBody**
+  - **Type:** object
+  - **Description:** Body of the API request containing product details.
+  - **Properties:**
+    - **name**
+      - **Type:** string
+      - **Description:** Name of the product.
+    - **price**
+      - **Type:** number
+      - **Description:** Price of the product.
+    - **quantity**
+      - **Type:** integer
+      - **Description:** Quantity of the product in stock.
+  - **Required Fields:** name, price, quantity
+
+## Required Fields for Schema
+
+- **method**
+- **endpoint**
+- **description**
+- **requestBody**
+
+This schema is essential for ensuring that the API requests generated are consistent and adhere to the required format for our product catalog microservice. 
+
+## Source of the Schema
+
+The schema is inspired by and adapted from a guided research project by ADA-GWU. For more details and the original schema, please visit the GitHub repository: [ADA-GWU/guidedresearchproject-tmehtiyev2019](https://github.com/ADA-GWU/guidedresearchproject-tmehtiyev2019/tree/main/app/product_catalog_microservice)
+
+---
+
+*Note: The schema is subject to modifications based on project requirements and updates in the API or data structure.*
+
+
+
   
 ## Standardizing Testing and Evaluation Criteria
 
