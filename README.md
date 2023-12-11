@@ -96,9 +96,7 @@ The schema is inspired by and adapted from a guided research project by ADA-GWU.
 
 
   
-## Standardizing Testing and Evaluation Criteria
-
-### Testing Standardization
+## Experiment Design
 
 #### Overview
 
