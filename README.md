@@ -39,36 +39,27 @@ To ensure a structured and standardized comparison of different Large Language M
 
 #### Test Case Development
 - **Diverse Scenarios:** We design a set of standardized test cases that cover a wide range of input scenarios to comprehensively evaluate the LLMs' capabilities.
-- **Consistency:** All test cases are crafted to ensure diversity in complexity, length, and subject matter.
+- **Consistency:** All test cases are crafted to ensure diversity in complexity, length.
 
 #### Testing Environment
 - **Uniform Environment:** Tests are conducted in a consistent environment — same hardware, software versions, and network conditions.
 - **Consistent LLM Utilization:** Each LLM is accessed and used in a similar manner to ensure uniformity in testing.
-
-#### Automated Testing
-- **Framework Utilization:** We use an automated testing framework to execute the test cases, ensuring consistent execution and minimizing manual errors.
-- **Metric Recording:** Key metrics like response times and accuracy are recorded systematically.
 
 #### Data Collection
 - **Structured Format:** Outputs from each LLM are collected and stored in a structured format for subsequent analysis.
 
 ### Evaluation Criteria Standardization
 
-To assess the performance of each LLM, we establish standardized evaluation criteria:
+To assess the performance of each LLM, we use the following metrics:
 
 #### Performance Metrics
 - **Accuracy:** The precision in translating natural language inputs to the correct API calls.
-- **Response Time:** The duration taken by each LLM to process an input and return a response.
-- **Robustness:** The ability of the LLM to handle ambiguous or complex queries effectively.
 - **Consistency:** The uniformity in performance across various input types.
 
 #### Evaluation Methods
 - **Manual Review:** Expert review is used where automated evaluation is not feasible.
 - **Statistical Analysis:** Statistical techniques are employed to analyze collected data.
 - **Error Analysis:** Types of errors made by each LLM are categorized and examined.
-
-#### Benchmarking
-- **Performance Benchmarks:** We establish benchmarks for each metric to classify LLM performance.
 
 ### Documentation and Reporting
 
